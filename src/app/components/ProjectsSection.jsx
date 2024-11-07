@@ -141,24 +141,8 @@ const projectsData = [
     gitUrl: "",
     previewUrl: "",
   },
-  {
-    id: 16,
-    title: "Graphic Skin Care Design Project",
-    description: "Graphic Design Project",
-    image: "/images/projects/web5.PNG",
-    tag: ["All" ,"SkinCareDesign"],
-    gitUrl: "",
-    previewUrl: "",
-  },
-  {
-    id: 17,
-    title: "Graphic Skin Care Design Project",
-    description: "Graphic Design Project",
-    image: "/images/projects/web6.PNG",
-    tag: ["All" ,"SkinCareDesign"],
-    gitUrl: "",
-    previewUrl: "",
-  },
+
+
 ];
 
 const ProjectsSection = () => {
