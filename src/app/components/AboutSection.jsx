@@ -10,13 +10,13 @@ const TAB_DATA = [
     content: (
       <ul className="list-disc pl-2">
         <li>Problem solving</li>
-        <li>Visulization</li>
+        <li>Visualization</li>
         <li>Sketches</li>
         <li>Typography</li>
         <li>UI/UX Designing</li>
         <li>Sales And Marketing</li>
-        <li>Time managment</li>
-        <li>Colour theory</li>
+        <li>Time management</li>
+        <li>Color theory</li>
       </ul>
     ),
   },
@@ -25,13 +25,11 @@ const TAB_DATA = [
     id: "SEskills",
     content: (
       <ul className="list-disc pl-2">
-        <li>Adobe
-illustrator</li>
-        <li>Adobe
-        Photoshop</li>
+        <li>Adobe Illustrator</li>
+        <li>Adobe Photoshop</li>
         <li>Keyshot</li>
         <li>Canva</li>
-        <li>Indesign</li>
+        <li>InDesign</li>
       </ul>
     ),
   },
@@ -40,12 +38,8 @@ illustrator</li>
     id: "education",
     content: (
       <ul className="list-disc pl-2">
-        <li>BS Industrial design
-University of Gujrat
-2019 - 2023</li>
-        <li>Diploma in design
-Vocational Training Institute
-2018- 2019</li>
+        <li>BS Industrial Design, University of Gujrat, 2019 - 2023</li>
+        <li>Diploma in Design, Vocational Training Institute, 2018-2019</li>
       </ul>
     ),
   },
@@ -54,15 +48,9 @@ Vocational Training Institute
     id: "certifications",
     content: (
       <ul className="list-disc pl-2">
-        <li>Rough Copies
-Graphic Designer June 2024
-
-</li>
-        <li>Digilatics
-        Graphic Designer 2023-2024</li>
-        <li>Sialkot Industries
-        Industrial designer 2022-2023
-        </li>
+        <li>Rough Copies - Graphic Designer (June 2024)</li>
+        <li>Digilatics - Graphic Designer (2023-2024)</li>
+        <li>Sialkot Industries - Industrial Designer (2022-2023)</li>
       </ul>
     ),
   },
@@ -80,19 +68,21 @@ const AboutSection = () => {
 
   return (
     <section className="text-white" id="about">
-      <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
+      <div className="flex flex-col md:flex-row items-center gap-8 py-8 px-4 sm:py-16 sm:px-8 md:px-16 xl:gap-16">
         <Image
           src="/images/about-image.png"
           width={500}
           height={500}
           alt="A description of the image"
+          className="w-40 h-40 sm:w-56 sm:h-56 md:w-64 md:h-64 xl:w-80 xl:h-80"
         />
-        <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-          <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
-          <p className="text-base lg:text-lg">
-          My self Sahar Sultan,I am a graphic designer,learning more towrds the technical side of things versus the art side.I do illustration and visual apperance of design.I work mostly in illustrator and photoshop.
+        <div className="mt-4 md:mt-0 text-left flex flex-col w-full md:w-auto">
+          <h2 className="text-3xl font-bold text-white mb-4 md:text-4xl">About Me</h2>
+          <p className="text-sm sm:text-base lg:text-lg">
+            My name is Sahar Sultan, and I am a graphic designer focusing on the technical side of design.
+            I specialize in illustration and visual design, primarily using Illustrator and Photoshop.
           </p>
-          <div className="flex flex-row justify-start mt-8">
+          <div className="flex overflow-x-auto mt-8 space-x-2">
             <TabButton
               selectTab={() => handleTabChange("skills")}
               active={tab === "skills"}
@@ -118,7 +108,7 @@ const AboutSection = () => {
               Certifications
             </TabButton>
           </div>
-          <div className="mt-8">
+          <div className="mt-8 text-sm sm:text-base">
             {TAB_DATA.find((t) => t.id === tab).content}
           </div>
         </div>
